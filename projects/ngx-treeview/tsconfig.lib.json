@@ -9,7 +9,6 @@
     "types": []
   },
   "angularCompilerOptions": {
-    "enableResourceInlining": true,
     "strictTemplates": true,
   },
   "exclude": [

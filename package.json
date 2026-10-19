@@ -10,7 +10,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build:demo": "ng build angular-ngx-treeview --aot --output-hashing=all --base-href /ngx-treeview/",
-    "build": "ng-packagr -p ./projects/ngx-treeview/ng-package.json",
+    "build": "ng build ngx-treeview",
     "publish": "npm run build && npm publish --access public --folder ./dist/ngx-treeview",
     "test": "ng test",
     "deploy": "npm run build:demo && node gh-pages.js"
