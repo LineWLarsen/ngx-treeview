@@ -67,7 +67,7 @@
 - Re-release as major version to reflect Angular 21 compatibility changes from `2.0.8`
 
 ----------
-# [4.0.0](https://www.npmjs.com/package/@linewlarsen/ngx-treeview) (2026-10-20)
+# [22.0.0](https://www.npmjs.com/package/@linewlarsen/ngx-treeview) (2026-10-20)
 
 Fork of [@charmedme/ngx-treeview](https://github.com/charmedme/ngx-treeview), published as `@linewlarsen/ngx-treeview`.
 

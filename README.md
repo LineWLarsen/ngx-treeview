@@ -1,20 +1,24 @@
 # ngx-treeview
 An Angular Bootstrap treeview component with checkboxes
+
+> This is a fork of [@charmedme/ngx-treeview](https://github.com/charmedme/ngx-treeview) (originally [leovo2708/ngx-treeview](https://github.com/leovo2708/ngx-treeview)), upgraded to Angular 22 and published as `@linewlarsen/ngx-treeview`.
+> For Angular 21, use [@charmedme/ngx-treeview@3](https://www.npmjs.com/package/@charmedme/ngx-treeview).
+
 ## Dependencies
 
-- [Angular](https://angular.io)
+- [Angular](https://angular.dev)
 - [Lodash](https://lodash.com)
 - [Bootstrap 5](https://getbootstrap.com)
 
-For Bootstrap 4, use [1.0.0](https://www.npmjs.com/package/@charmedme/ngx-treeview/v/1.0.0)
+For Bootstrap 4, use [@charmedme/ngx-treeview@1.0.0](https://www.npmjs.com/package/@charmedme/ngx-treeview/v/1.0.0)
 
 You can customize CSS yourself to break down dependencies to Bootstrap.
 
 ## Compatibility
 
-- Angular: `^21.0.0`
-- Bootstrap: `^5.0.0`
-- Node.js: use a supported LTS version for your Angular CLI version
+| @linewlarsen/ngx-treeview | Angular | Bootstrap | Node.js |
+|---|---|---|---|
+| 22.x | `^22.0.0` | `^5.0.0` | 22.22+ or 24.13+ |
 
 ## Features
 
@@ -26,25 +30,24 @@ You can customize CSS yourself to break down dependencies to Bootstrap.
 - Checkbox with tri-state
 
 ## Status
- [![build](https://github.com/Charmedme/ngx-treeview/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Charmedme/ngx-treeview/actions/workflows/npm-publish.yml)
- [![pages-build-deployment](https://github.com/Charmedme/ngx-treeview/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/Charmedme/ngx-treeview/actions/workflows/pages/pages-build-deployment)
-[![NPM Version](https://img.shields.io/npm/v/@charmedme/ngx-treeview.svg)](https://www.npmjs.com/package/@charmedme/ngx-treeview)
+[![NPM Version](https://img.shields.io/npm/v/@linewlarsen/ngx-treeview.svg)](https://www.npmjs.com/package/@linewlarsen/ngx-treeview)
 
 ## Demo
+The API is unchanged from the upstream package, so the upstream demo applies:
 [https://charmedme.github.io/ngx-treeview/](https://charmedme.github.io/ngx-treeview)
 
 ## Installation
 
-After install the above dependencies, install `ngx-treeview` via:
+After installing the above dependencies, install `ngx-treeview` via:
 
 ```shell
-npm i @charmedme/ngx-treeview --save
+npm i @linewlarsen/ngx-treeview --save
 ```
 
-Once installed you need to import our main module in your application module:
+### NgModule-based applications
 
-```js
-import { TreeviewModule } from 'ngx-treeview';
+```ts
+import { TreeviewModule } from '@linewlarsen/ngx-treeview';
 
 @NgModule({
   declarations: [AppComponent, ...],
@@ -53,6 +56,43 @@ import { TreeviewModule } from 'ngx-treeview';
 })
 export class AppModule {
 }
+```
+
+### Standalone applications
+
+Register the providers once when bootstrapping:
+
+```ts
+import { importProvidersFrom } from '@angular/core';
+import { TreeviewModule } from '@linewlarsen/ngx-treeview';
+
+bootstrapApplication(AppComponent, {
+  providers: [importProvidersFrom(TreeviewModule.forRoot())]
+});
+```
+
+Then import `TreeviewModule` in the components that use it:
+
+```ts
+@Component({
+  imports: [TreeviewModule],
+  ...
+})
+export class MyComponent {}
+```
+
+### Migrating from @charmedme/ngx-treeview
+
+Replace the package and update the import paths. No other code changes are needed.
+
+```shell
+npm uninstall @charmedme/ngx-treeview
+npm i @linewlarsen/ngx-treeview
+```
+
+```diff
+- import { TreeviewModule, TreeviewItem } from '@charmedme/ngx-treeview';
++ import { TreeviewModule, TreeviewItem } from '@linewlarsen/ngx-treeview';
 ```
 
 ## Usage
@@ -125,10 +165,9 @@ const itCategory = new TreeviewItem(
           text: "Frontend",
           value: 911,
           children: [
-            { text: "Angular 18", value: 9112 },
-            { text: "Angular 19", value: 9113 },
             { text: "Angular 20", value: 9114 },
-            { text: "Angular 21", value: 9115, disabled: true },
+            { text: "Angular 21", value: 9115 },
+            { text: "Angular 22", value: 9116, disabled: true },
             { text: "ReactJS", value: 9120 },
           ],
         },
@@ -156,7 +195,7 @@ const itCategory = new TreeviewItem(
 });
 ```
 
-You can pass the second paramater 'autoCorrectChecked' with value=true (default is false) in constructor of TreeviewItem to correct checked value of it and all of its descendants. In some cases, you need to push or pop children flexibly, checked of parent may be not correct. Then you need to call function correctChecked() to help to correct from root to its descendants.
+You can pass the second parameter 'autoCorrectChecked' with value=true (default is false) in constructor of TreeviewItem to correct checked value of it and all of its descendants. In some cases, you need to push or pop children flexibly, checked of parent may be not correct. Then you need to call function correctChecked() to help to correct from root to its descendants.
 
 ```ts
 const vegetableCategory = new TreeviewItem({
@@ -178,13 +217,13 @@ vegetableCategory.correctChecked(); // need this to make 'Vegetable' node to cha
 Extract data from list of checked TreeviewItem and send it in parameter of event selectedChange. Some built-in TreeviewEventParser:
 
 - DefaultTreeviewEventParser: return values of checked items.
-- DownlineTreeviewEventParser: return list of checked items in orginal order with their ancestors.
+- DownlineTreeviewEventParser: return list of checked items in original order with their ancestors.
 - OrderDownlineTreeviewEventParser: return list of checked items in checked order with their ancestors. Note that: value of a leaf must be different from value of other leaves.
 
 #### Templating:
 
-See example 4 & 5.
+See example 4 & 5 in the demo.
 
 ## Contributing
 
-I am very appreciate for your ideas, proposals and found bugs which you can leave in github issues. Thanks in advance!
+Ideas, proposals and bug reports are welcome as [GitHub issues](https://github.com/LineWLarsen/ngx-treeview/issues). Changes that are useful upstream are also offered to [charmedme/ngx-treeview](https://github.com/charmedme/ngx-treeview).

@@ -58,8 +58,8 @@ In `projects/ngx-treeview/package.json`, choose one:
 
 | peerDependencies | Version bump | When |
 |---|---|---|
-| `">=22.0.0 <24.0.0"` | minor (e.g. 4.1.0) | Code still works on the previous major. Consumers can upgrade at their own pace. **Preferred.** |
-| `"^23.0.0"` | major (e.g. 5.0.0) | Code changes only work on the new major, or you want to drop the old one. |
+| `">=22.0.0 <24.0.0"` | minor (e.g. 22.1.0) | Code still works on the previous major. Consumers can upgrade at their own pace. **Preferred.** |
+| `"^23.0.0"` | major (e.g. 23.0.0) | Code changes only work on the new major, or you want to drop the old one. |
 
 Also check `dependencies.tslib` matches what Angular uses.
 
@@ -88,13 +88,13 @@ The file list should only contain `fesm2022/`, `types/`, `package.json`, `README
 git checkout master
 git merge ng23
 git push
-git tag v4.1.0 && git push --tags
+git tag 23.1.0 && git push --tags
 ```
 
 ### 8. Update consuming apps
 
 ```bash
-npm install @linewlarsen/ngx-treeview@^4.1.0
+npm install @linewlarsen/ngx-treeview@^23.1.0
 npm run lint && npm test && npx ng build
 ```
 
