@@ -10,6 +10,12 @@
     "src/polyfills.ts"
   ],
   "angularCompilerOptions": {
+    "extendedDiagnostics": {
+      "checks": {
+        "nullishCoalescingNotNullable": "suppress",
+        "optionalChainNotNullable": "suppress"
+      }
+    },
     "strictTemplates": true
   },
   "include": [

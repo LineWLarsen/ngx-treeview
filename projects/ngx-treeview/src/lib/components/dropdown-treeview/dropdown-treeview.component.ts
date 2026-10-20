@@ -1,4 +1,4 @@
-﻿import { Component, EventEmitter, Input, Output, ViewChild, TemplateRef } from '@angular/core';
+﻿import { Component, EventEmitter, Input, Output, ViewChild, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
 import { TreeviewI18n } from '../../models/treeview-i18n';
 import { TreeviewItem } from '../../models/treeview-item';
 import { TreeviewConfig } from '../../models/treeview-config';
@@ -10,6 +10,7 @@ import { TreeviewItemTemplateContext } from '../../models/treeview-item-template
     selector: 'ngx-dropdown-treeview',
     templateUrl: './dropdown-treeview.component.html',
     styleUrls: ['./dropdown-treeview.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DropdownTreeviewComponent {

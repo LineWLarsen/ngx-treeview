@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, OnChanges, ChangeDetectionStrategy } from '@angular/core';
 import { isNil } from 'lodash';
 import { TreeviewI18n, TreeviewItem, TreeviewConfig, DropdownTreeviewComponent, TreeviewHelper } from 'ngx-treeview';
 import { DropdownTreeviewSelectI18n } from './dropdown-treeview-select-i18n';
@@ -12,6 +12,7 @@ import { DropdownTreeviewSelectI18n } from './dropdown-treeview-select-i18n';
     providers: [
         { provide: TreeviewI18n, useClass: DropdownTreeviewSelectI18n }
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DropdownTreeviewSelectComponent implements OnChanges {

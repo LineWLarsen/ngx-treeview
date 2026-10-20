@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TreeviewConfig, TreeviewItem } from 'ngx-treeview';
 import { RoomService } from './room.service';
 
@@ -8,6 +8,7 @@ import { RoomService } from './room.service';
     providers: [
         RoomService
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class RoomComponent implements OnInit {

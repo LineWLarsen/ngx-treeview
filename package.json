@@ -37,28 +37,28 @@
     "url": "https://github.com/charmedme/ngx-treeview/issues"
   },
   "dependencies": {
-    "@angular/animations": "^21.1.4",
-    "@angular/common": "^21.1.4",
-    "@angular/compiler": "^21.1.4",
-    "@angular/core": "^21.1.4",
-    "@angular/forms": "^21.1.4",
-    "@angular/platform-browser": "^21.1.4",
-    "@angular/platform-browser-dynamic": "^21.1.4",
-    "@angular/router": "^21.1.4",
+    "@angular/animations": "^22.2.3",
+    "@angular/common": "^22.2.3",
+    "@angular/compiler": "^22.2.3",
+    "@angular/core": "^22.2.3",
+    "@angular/forms": "^22.2.3",
+    "@angular/platform-browser": "^22.2.3",
+    "@angular/platform-browser-dynamic": "^22.2.3",
+    "@angular/router": "^22.2.3",
     "bootstrap": "^5.0.0",
     "lodash": "^4.17.21",
     "rxjs": "^7.5.5",
-    "tslib": "^2.3.1",
-    "zone.js": "~0.15.1"
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^21.1.4",
-    "@angular/cli": "^21.1.4",
-    "@angular/compiler-cli": "^21.1.4",
+    "@angular/build": "^22.2.3",
+    "@angular/cli": "^22.2.3",
+    "@angular/compiler-cli": "^22.2.3",
     "@types/jasmine": "^4.0.3",
     "@types/lodash": "^4.14.182",
     "@types/node": "^17.0.38",
     "gh-pages": "^6.3.0",
+    "istanbul-lib-instrument": "^6.0.3",
     "jasmine-core": "^4.1.1",
     "jasmine-spec-reporter": "^7.0.0",
     "karma": "~6.4.4",
@@ -66,8 +66,9 @@
     "karma-coverage": "^2.2.1",
     "karma-jasmine": "^5.0.1",
     "karma-jasmine-html-reporter": "^2.0.0",
-    "ng-packagr": "^21.1.0",
-    "typescript": "~5.9.3"
+    "ng-packagr": "^22.2.4",
+    "typescript": "~6.0.3",
+    "zone.js": "^0.16.3"
   },
   "allowScripts": {
     "esbuild": true,

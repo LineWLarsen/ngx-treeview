@@ -1,4 +1,4 @@
-import { Component, DebugElement } from '@angular/core';
+import { Component, DebugElement, ChangeDetectionStrategy } from '@angular/core';
 import { TestBed, ComponentFixture, fakeAsync, tick } from '@angular/core/testing';
 import { BrowserModule, By } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -28,6 +28,7 @@ const fakeData: FakeData = {
 @Component({
     selector: 'ngx-test',
     template: '',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class TestComponent {
@@ -72,6 +73,7 @@ describe('DropdownTreeviewComponent', () => {
     const fixture = createTestComponent(template);
     fixture.detectChanges();
     tick();
+    fixture.detectChanges();
     button = fixture.debugElement.query(By.css('button'));
   }));
 

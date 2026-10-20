@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "strict": false,
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
@@ -19,7 +19,7 @@
     "paths": {
       "ngx-treeview": [
         // "dist/ngx-treeview"
-        "projects/ngx-treeview/src/public-api"
+        "./projects/ngx-treeview/src/public-api"
       ]
     }
   }

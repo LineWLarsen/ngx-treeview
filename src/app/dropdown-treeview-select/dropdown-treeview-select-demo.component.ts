@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TreeviewItem, TreeviewConfig } from 'ngx-treeview';
 import { BookService } from '../book/book.service';
 
@@ -8,6 +8,7 @@ import { BookService } from '../book/book.service';
     providers: [
         BookService
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DropdownTreeviewSelectDemoComponent implements OnInit {

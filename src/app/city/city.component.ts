@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { TreeviewI18n, DropdownTreeviewComponent } from 'ngx-treeview';
 import { City, CityService } from './city.service';
 import { CityTreeviewI18n } from './city-treeview-i18n';
@@ -10,6 +10,7 @@ import { CityTreeviewI18n } from './city-treeview-i18n';
         CityService,
         { provide: TreeviewI18n, useClass: CityTreeviewI18n }
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CityComponent implements OnInit {

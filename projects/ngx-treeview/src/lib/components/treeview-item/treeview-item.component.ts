@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, Input, Output, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
 import { isNil } from 'lodash';
 import { TreeviewItem } from '../../models/treeview-item';
 import { TreeviewConfig } from '../../models/treeview-config';
@@ -8,6 +8,7 @@ import { TreeviewItemTemplateContext } from '../../models/treeview-item-template
     selector: 'ngx-treeview-item',
     templateUrl: './treeview-item.component.html',
     styleUrls: ['./treeview-item.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class TreeviewItemComponent {

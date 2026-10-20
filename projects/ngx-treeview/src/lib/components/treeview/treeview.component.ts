@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, SimpleChanges, OnChanges, TemplateRef, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, SimpleChanges, OnChanges, TemplateRef, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { isNil, includes } from 'lodash';
 import { TreeviewI18n } from '../../models/treeview-i18n';
 import { TreeviewItem, TreeviewSelection } from '../../models/treeview-item';
@@ -46,6 +46,7 @@ class FilterTreeviewItem extends TreeviewItem {
     selector: 'ngx-treeview',
     templateUrl: './treeview.component.html',
     styleUrls: ['./treeview.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class TreeviewComponent implements OnChanges, OnInit {

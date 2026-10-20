@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit, ViewChild } from '@angular/core';
+import { Component, Injectable, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { isNil, remove, reverse } from 'lodash';
 import {
   TreeviewItem, TreeviewConfig, TreeviewHelper, TreeviewComponent,
@@ -23,6 +23,7 @@ export class ProductTreeviewConfig extends TreeviewConfig {
         { provide: TreeviewEventParser, useClass: OrderDownlineTreeviewEventParser },
         { provide: TreeviewConfig, useClass: ProductTreeviewConfig }
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ProductComponent implements OnInit {
