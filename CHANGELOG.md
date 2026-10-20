@@ -67,3 +67,31 @@
 - Re-release as major version to reflect Angular 21 compatibility changes from `2.0.8`
 
 ----------
+# [4.0.0](https://www.npmjs.com/package/@linewlarsen/ngx-treeview) (2026-10-20)
+
+Fork of [@charmedme/ngx-treeview](https://github.com/charmedme/ngx-treeview), published as `@linewlarsen/ngx-treeview`.
+
+### Enhancement:
+
+- Upgrade workspace and library to Angular 22
+- Upgrade TypeScript to 6.0 and ng-packagr to 22
+- Build library in partial compilation mode (`compilationMode: "partial"`), making the published package compatible across Angular patch and minor versions
+- Migrate demo app to the `@angular/build` application builder (esbuild/Vite)
+- Migrate tests to the `@angular/build:karma` builder; remove legacy `test.ts` and `polyfills.ts`
+- Set explicit `ChangeDetectionStrategy.Eager` on all components to preserve existing behaviour under Angular 22's new OnPush default
+
+### Fixes:
+
+- Fix `ng-packagr` builder reference in `angular.json` (was the long-removed `@angular-devkit/build-ng-packagr`)
+- Fix `publish` script (`--folder` is not a valid npm flag)
+- Fix dropdown test relying on implicit change detection after `tick()`
+- Remove obsolete View Engine option `enableResourceInlining`, `baseUrl` (deprecated in TypeScript 6) and `tslint.json`
+- Remove unused `@angular/animations` dependency
+
+### Breaking Changes:
+
+- Package renamed from `@charmedme/ngx-treeview` to `@linewlarsen/ngx-treeview`
+- Angular peer dependency range is now `^22.0.0`
+- Requires Node.js 22.22+ or 24.13+ (Angular 22 requirement)
+
+----------
