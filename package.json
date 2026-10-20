@@ -26,7 +26,6 @@
     "url": "https://github.com/LineWLarsen/ngx-treeview/issues"
   },
   "dependencies": {
-    "@angular/animations": "^22.2.3",
     "@angular/common": "^22.2.3",
     "@angular/compiler": "^22.2.3",
     "@angular/core": "^22.2.3",
