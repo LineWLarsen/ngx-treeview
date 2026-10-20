@@ -3,6 +3,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../../out-tsc/lib",
+    "rootDir": "./src",
     "target": "es2022",
     "declaration": true,
     "inlineSources": true,
