@@ -1,11 +1,12 @@
 {
-  "name": "@charmedme/ngx-treeview",
-  "version": "3.0.0",
+  "name": "@linewlarsen/ngx-treeview",
+  "version": "4.0.0",
   "license": "MIT",
   "contributors": [
-    "Charmedme"
+    "Charmedme",
+    "LineWLarsen"
   ],
-  "description": "An Angular Boostrap treeview component with checkboxes",
+  "description": "An Angular Bootstrap treeview component with checkboxes (Angular 22 fork of @charmedme/ngx-treeview)",
   "keywords": [
     "ng",
     "ngx",
@@ -22,18 +23,19 @@
   "author": "Charmedme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charmedme/ngx-treeview.git"
+    "url": "git+https://github.com/LineWLarsen/ngx-treeview.git"
   },
+  "homepage": "https://github.com/LineWLarsen/ngx-treeview#readme",
   "bugs": {
-    "url": "https://github.com/charmedme/ngx-treeview/issues"
+    "url": "https://github.com/LineWLarsen/ngx-treeview/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^21.0.0",
-    "@angular/core": "^21.0.0",
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0",
     "lodash": "^4.0.0",
     "bootstrap": "^5.0.0"
   },
   "dependencies": {
-    "tslib": "^2.3.1"
+    "tslib": "^2.8.1"
   }
 }
