@@ -1,40 +1,29 @@
 {
-  "name": "@charmedme/ngx-treeview",
-  "version": "3.0.0",
+  "name": "ngx-treeview-workspace",
+  "version": "4.0.0",
+  "private": true,
   "license": "MIT",
   "contributors": [
-    "Charmedme"
+    "Charmedme",
+    "LineWLarsen"
   ],
-  "description": "An Angular Boostrap treeview component with checkboxes",
+  "description": "Workspace for @linewlarsen/ngx-treeview (library + demo app)",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build:demo": "ng build angular-ngx-treeview --aot --output-hashing=all --base-href /ngx-treeview/",
     "build": "ng build ngx-treeview",
-    "publish": "npm run build && npm publish --access public --folder ./dist/ngx-treeview",
+    "publish:lib": "npm run build && npm publish ./dist/ngx-treeview --access public",
     "test": "ng test",
     "deploy": "npm run build:demo && node gh-pages.js"
   },
-  "keywords": [
-    "ng",
-    "ngx",
-    "angular",
-    "ngx-treeview",
-    "tree",
-    "treeview",
-    "tree-view",
-    "checkbox",
-    "dropdown",
-    "recursive",
-    "angular tree component"
-  ],
   "author": "Charmedme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charmedme/ngx-treeview.git"
+    "url": "git+https://github.com/LineWLarsen/ngx-treeview.git"
   },
   "bugs": {
-    "url": "https://github.com/charmedme/ngx-treeview/issues"
+    "url": "https://github.com/LineWLarsen/ngx-treeview/issues"
   },
   "dependencies": {
     "@angular/animations": "^22.2.3",
@@ -48,7 +37,7 @@
     "bootstrap": "^5.0.0",
     "lodash": "^4.17.21",
     "rxjs": "^7.5.5",
-    "tslib": "^2.3.1"
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@angular/build": "^22.2.3",
@@ -56,7 +45,7 @@
     "@angular/compiler-cli": "^22.2.3",
     "@types/jasmine": "^4.0.3",
     "@types/lodash": "^4.14.182",
-    "@types/node": "^17.0.38",
+    "@types/node": "^24.0.0",
     "gh-pages": "^6.3.0",
     "istanbul-lib-instrument": "^6.0.3",
     "jasmine-core": "^4.1.1",

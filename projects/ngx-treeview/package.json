@@ -1,6 +1,7 @@
 {
   "name": "@linewlarsen/ngx-treeview",
   "version": "4.0.0",
+  "private": true,
   "license": "MIT",
   "contributors": [
     "Charmedme",
